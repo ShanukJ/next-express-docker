@@ -1,0 +1,12 @@
+{
+  "name": "nextjs-express-app",
+  "version": "1.0.0",
+  "scripts": {
+    "setup": "cd frontend && npm install && cd ../backend && npm install",
+    "dev": "concurrently \"npm run dev --prefix frontend\" \"npm run dev --prefix backend\"",
+    "build": "docker build -t next-express-docker ."
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
